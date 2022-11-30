@@ -2,42 +2,7 @@
 //a datastore
 
 let DataStore = {
-    locations: [
-        {
-            id: 1,
-            coordinates: {x: 10, y: 20},
-            name: "Glaicer National Park",
-            years: [
-                {
-                    year: "1800",
-                    temprature: "70F",
-                    image: "imageURL"
-                },
-                {
-                    year: "1900",
-                    temprature: "80F",
-                    image: "imageURL"
-                }
-            ]
-        },
-        {
-            id: 2,
-            coordinates: {x: 15, y: 25},
-            name: "Yellowstone National Park",
-            years: [
-                {
-                    year: "1800",
-                    temprature: "70F",
-                    image: "imageURL"
-                },
-                {
-                    year: "1900",
-                    temprature: "80F",
-                    image: "imageURL"
-                }
-            ]
-        }
-    ],
+    locations: [],
     modal: {},
     subscribers: [],
     subscribe: function(callback) {
@@ -52,6 +17,16 @@ let DataStore = {
         this.modal = location;
         this.updateSubscribers();
     },
+    fetchData: function() {
+        console.log("fetched");
+
+        fetch("./api/data.json")
+        .then(res => res.json())
+        .then((result) => {
+            this.locations = result;
+        });
+
+    }
 
 
 

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "coordinates": {"lat": 40.023333, "long": -105.647778},
+        "name": "Arapaho Glacier",
+        "location": "Roosevelt National Forest, Colorado",
+        "years": [
+            {
+                "year": "1898",
+                "image": "./images/before_after/Arapaho_1.jpg"
+            },
+            {
+                "year": "2003",
+                "image": "./images/before_after/Arapaho_2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "coordinates": {"lat": 36.25, "long": -114.39},
+        "name": "Lake Mead",
+        "location": "Nevada/Arizona",
+        "years": [
+            {
+                "year": "2000",
+                "image": "./images/before_after/LakeMead_1.jpeg"
+            },
+            {
+                "year": "2022",
+                "image": "./images/before_after/LakeMead_2.jpeg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "coordinates": {"lat": -13.905332, "long": -70.834809},
+        "name": "Qori Kalis Glacier",
+        "location": "Andes Mountains, Peru",
+        "years": [
+            {
+                "year": "1978",
+                "image": "./images/before_after/QoriKalis_1.png"
+            },
+            {
+                "year": "2011",
+                "image": "./images/before_after/QoriKalis_2.png"
+            }
+        ]
+    }
+]
