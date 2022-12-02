@@ -10,13 +10,9 @@ export default function App() {
     useEffect(() => {
         //populate DataStore from external JSON
         DataStore.fetchData();
-    
-    
-      }, []);
-
+    }, []);
 
     return (
-
 
         <div>
             <LocationModal />

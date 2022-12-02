@@ -1,23 +1,16 @@
 import { DataStore } from "../data/DataStore";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Points() {
 
     const [locations, setLocation] = useState([]);
 
-    useEffect (() => {
+    useEffect(() => {
         setLocation(DataStore.locations);
     }, []);
 
 
-    //get coordinates for each point on globe
-    const coords = {
-        lat: 40.023333,
-        long: -105.647778
-    }
-
-
-
+    //calculate position on globe from lat and long
     function calcPosFromLatLonRad(lat, long) {
         let phi = (90 - lat) * (Math.PI / 180);
         let theta = (long + 180) * (Math.PI / 180);
@@ -27,17 +20,12 @@ export default function Points() {
         return [x, y, z];
     }
 
-    let pos = calcPosFromLatLonRad(coords.lat, coords.long);
-
 
 
     const points = locations.map((location) => (
-        <mesh position={calcPosFromLatLonRad(location.coordinates.lat, location.coordinates.long)}
+        <mesh key={location.id} position={calcPosFromLatLonRad(location.coordinates.lat, location.coordinates.long)}
             onClick={(e) => {
-
-
                 DataStore.updateModal(location);
-                //props.setBoxSelected(mesh.current.position);
                 //console.log(DataStore.modal)
             }}>
             <sphereGeometry args={[.015, 5, 5]} />
@@ -46,18 +34,11 @@ export default function Points() {
 
     ))
 
-
-
-
-//console.log(points);
-
-
+    //console.log(points);
 
     return (
         <>
-        {points}
+            {points}
         </>
-
-        
     );
 }

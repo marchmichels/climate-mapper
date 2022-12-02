@@ -29,7 +29,7 @@ export default function Map() {
 
                 <group>
                     <Earth position={[0, 0, 0]}  />
-                    <Moon position={[-5, .5, 0]} />
+                    <Moon position={[-1.5, .5, 0]} />
                 </group>
 
             </Canvas>

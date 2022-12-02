@@ -8,7 +8,6 @@ import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 
 
-
 const style = {
   position: 'absolute',
   top: '50%',
@@ -22,29 +21,21 @@ const style = {
 };
 
 export default function LocationModal() {
+
   const [open, setOpen] = useState(false);
   const [location, setLocation] = useState({});
   const [firstImage, setFirstImage] = useState({});
   const [secondImage, setSecondImage] = useState({});
 
-
-
-
-
-
-
   useEffect(() => {
-    //subscribe
+    //subscribe to DataStore
     DataStore.subscribe(onModalChange);
-
 
   }, []);
 
+  //when the modal changes, update information
   function onModalChange() {
     setLocation(DataStore.modal);
-    //FIRST_IMAGE.imageUrl = location.years[0].image;
-    //SECOND_IMAGE.imageUrl = location.years[1].image
-    //console.log(DataStore.modal.years[0].image)
     setFirstImage({
       imageUrl: DataStore.modal.years[0].image
     });
@@ -55,17 +46,7 @@ export default function LocationModal() {
 
   }
 
-  //create a modal
-
-  // const years = location.years.map((year) => (
-  //   <Typography id="modal-modal-title" variant="body1" component="h2">
-  //   {years.year}
-  // </Typography>
-
-  // ))
-
-
-
+  //close the modal
   const handleClose = () => setOpen(false);
 
   return (
@@ -90,35 +71,11 @@ export default function LocationModal() {
           </Typography>
 
 
+          <ReactBeforeSliderComponent
+            firstImage={firstImage}
+            secondImage={secondImage}
+          />
 
-
-
-
-
-
-
-
-
-
-            <ReactBeforeSliderComponent
-              firstImage={firstImage}
-              secondImage={secondImage}
-            />
-
-
-
-
-
-          {/* <Typography id="modal-modal-description">
-            {location.years[0].year}
-          </Typography>
-          <Typography id="modal-modal-description">
-            {location.years[0].temprature}
-          </Typography>
-
-          <Typography id="modal-modal-description">
-            {location.years[0].image}
-          </Typography> */}
         </Box>
       </Modal>
     </div>

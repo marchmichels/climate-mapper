@@ -12,7 +12,7 @@ export default function Moon(props) {
 
     });
 
-    const moonMap = useLoader(TextureLoader, 'moon.jpg')
+    const moonMap = useLoader(TextureLoader, './three_textures/moon.jpg')
 
 
     return(
