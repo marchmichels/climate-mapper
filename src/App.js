@@ -1,25 +1,22 @@
 import React, { useEffect } from 'react';
-import Map from "./components/Map";
+import ThreeScene from "./components/ThreeScene";
 import LocationModal from "./components/LocationModal";
 import { DataStore } from './data/DataStore';
 
 
-//a react app
+//the climate mapper React application
 export default function App() {
 
+    //hydrate datastore from fake API JSON response
     useEffect(() => {
-        //populate DataStore from external JSON
         DataStore.fetchData();
     }, []);
 
     return (
-
         <div>
             <LocationModal />
-            <Map />
+            <ThreeScene />
         </div>
-
     )
 
 }
-

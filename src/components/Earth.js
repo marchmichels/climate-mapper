@@ -1,15 +1,13 @@
 import React, { useRef, Suspense } from "react";
-import { DataStore } from "../data/DataStore";
 import { useLoader, useFrame } from "@react-three/fiber";
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import Points from './Points';
 
-
-
+//the the Earth component is a sphere in Three.js
 export default function Earth(props) {
 
+    //ref to animate earth
     const earth = useRef();
-
 
     //rotate earth
     useFrame(({ clock }) => {
@@ -21,10 +19,8 @@ export default function Earth(props) {
     //earth texture
     const earthMap = useLoader(TextureLoader, './three_textures/earth.jpg')
 
-
     return (
         <Suspense fallback={null}>
-
 
             <mesh ref={earth}>
                 <sphereGeometry args={[1, 32, 32]} />
@@ -35,6 +31,4 @@ export default function Earth(props) {
         </Suspense>
     )
 
-
 }
-

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { DataStore } from '../data/DataStore';
@@ -20,20 +20,37 @@ const style = {
   p: 4,
 };
 
+
+
+//the LocationModal component displays a single data object when a point on earth is clicked
 export default function LocationModal() {
 
-  const [open, setOpen] = useState(false);
-  const [location, setLocation] = useState({});
-  const [firstImage, setFirstImage] = useState({});
-  const [secondImage, setSecondImage] = useState({});
+  const [open, setOpen] = useState(false);                //boolean//is the modal open?
+  const [location, setLocation] = useState({
+    "id": null,
+    "coordinates": { "lat": null, "long": null },
+    "name": null,
+    "location": null,
+    "years": [
+      {
+        "year": null,
+        "image": null
+      },
+      {
+        "year": null,
+        "image": null
+      }
+    ]
+  });           //object//a single data object representing a clicked point on earth
+  const [firstImage, setFirstImage] = useState({});       //object//an object containing the image Url for the before image
+  const [secondImage, setSecondImage] = useState({});     //object//an object containing the image Url for the after image
 
+  //subscribe to DataStore changes
   useEffect(() => {
-    //subscribe to DataStore
     DataStore.subscribe(onModalChange);
-
   }, []);
 
-  //when the modal changes, update information
+  //when DataStore modal property changes, update information
   function onModalChange() {
     setLocation(DataStore.modal);
     setFirstImage({
@@ -43,38 +60,98 @@ export default function LocationModal() {
       imageUrl: DataStore.modal.years[1].image
     });
     setOpen(true);
-
   }
 
   //close the modal
   const handleClose = () => setOpen(false);
 
+
   return (
     <div>
-
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-description">
-            Id: {location.id}
-          </Typography>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {location.name}
-          </Typography>
 
-          <Typography id="modal-modal-title" variant="body1" component="h2">
-            {location.location}
-          </Typography>
+          <Grid container spacing={2}>
+
+            <Grid item xs={8}>
+              <Typography variant="h6" component="h2">
+                {location.name}
+              </Typography>
+              <Typography variant="body1" component="h2">
+                {location.location}
+              </Typography>
+            </Grid>
+
+            <Grid item xs={4}>
+
+
+            </Grid>
+
+
+
+
+          </Grid>
+
+
+
 
 
           <ReactBeforeSliderComponent
             firstImage={firstImage}
             secondImage={secondImage}
+            currentPercentPosition={"1"}
           />
+
+
+
+
+
+
+
+
+
+          <Grid container spacing={2}>
+
+            <Grid item xs={6}>
+
+              <Typography variant="body1" component="h2">
+                {location.years[0].year}
+              </Typography>
+
+
+
+            </Grid>
+
+            <Grid item xs={6}>
+
+              <Typography variant="body1" component="h2" align='right'>
+                {location.years[1].year}
+              </Typography>
+
+
+            </Grid>
+
+
+
+
+          </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </Box>
       </Modal>

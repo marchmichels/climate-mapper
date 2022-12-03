@@ -1,11 +1,10 @@
 body {
-    background-image: url('./../../public/stars.jpg');
-    background-color: #333;
+    background-color: black;
 }
 
 #threeContent {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 97vh;
+    width: 99vw;
 }

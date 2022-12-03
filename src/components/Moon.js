@@ -6,22 +6,12 @@ export default function Moon(props) {
 
     const moon = useRef();
 
-    useFrame(({ clock }) => {
-        const a = clock.getElapsedTime();
-        moon.current.rotation.y = a/4;
-
-    });
 
     const moonMap = useLoader(TextureLoader, './three_textures/moon.jpg')
 
 
     return(
-        <mesh {...props}
-        ref={moon}
-        onClick={(e) => {
-            console.log("Test");
-            //props.setBoxSelected(mesh.current.position);
-        }}>
+        <mesh {...props} ref={moon}>
             <sphereGeometry args={[.5, 32, 32]} />
             <meshStandardMaterial map={moonMap} />
         </mesh>
