@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { DataStore } from '../data/DataStore';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
+//import ReactBeforeSliderComponent from 'react-before-after-slider-component';
+//import 'react-before-after-slider-component/dist/build.css';
 
 
 
@@ -101,11 +101,11 @@ export default function LocationModal() {
 
 
 
-          <ReactBeforeSliderComponent
+          {/* <ReactBeforeSliderComponent
             firstImage={firstImage}
             secondImage={secondImage}
             currentPercentPosition={"1"}
-          />
+          /> */}
 
 
 

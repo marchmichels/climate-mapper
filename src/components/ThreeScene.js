@@ -1,11 +1,10 @@
 
-import React, { useRef, useState } from 'react';
-import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
-import { useSpring, animated } from "@react-spring/three";
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
 import Earth from "./Earth";
 import "./map.css";
 import Moon from './Moon';
-import { OrbitControls, Stats, Text, Stars, PerspectiveCamera } from "@react-three/drei";
+import { OrbitControls, Stars, PerspectiveCamera } from "@react-three/drei";
 
 
 
