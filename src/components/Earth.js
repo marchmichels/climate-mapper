@@ -22,7 +22,7 @@ export default function Earth(props) {
     return (
         <Suspense fallback={null}>
 
-            <mesh ref={earth}>
+            <mesh ref={earth} rotation={[0, 10.5, 0]}>
                 <sphereGeometry args={[1, 32, 32]} />
                 <meshStandardMaterial map={earthMap} />
                 <Points />

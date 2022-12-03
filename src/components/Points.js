@@ -28,7 +28,7 @@ export default function Points() {
                 DataStore.updateModal(location);
                 //console.log(DataStore.modal)
             }}>
-            <sphereGeometry args={[.015, 5, 5]} />
+            <sphereGeometry args={[.01, 20, 20]} />
             <meshStandardMaterial color={"red"} />
         </mesh>
 

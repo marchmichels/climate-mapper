@@ -8,14 +8,16 @@ import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 
 
+
+
+
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 'auto',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: 'rgba(43, 5, 125, 0.5)',
   boxShadow: 24,
   p: 4,
 };
@@ -77,10 +79,10 @@ export default function LocationModal() {
           <Grid container spacing={2}>
 
             <Grid item xs={8}>
-              <Typography variant="h6" component="h2">
+              <Typography variant="h4" component="h2" color="snow">
                 {location.name}
               </Typography>
-              <Typography variant="body1" component="h2">
+              <Typography variant="body1" component="h2" color="GhostWhite">
                 {location.location}
               </Typography>
             </Grid>
@@ -117,7 +119,7 @@ export default function LocationModal() {
 
             <Grid item xs={6}>
 
-              <Typography variant="body1" component="h2">
+              <Typography variant="body1" component="h2" color="GhostWhite">
                 {location.years[0].year}
               </Typography>
 
@@ -127,7 +129,7 @@ export default function LocationModal() {
 
             <Grid item xs={6}>
 
-              <Typography variant="body1" component="h2" align='right'>
+              <Typography variant="body1" component="h2" align='right' color="GhostWhite">
                 {location.years[1].year}
               </Typography>
 

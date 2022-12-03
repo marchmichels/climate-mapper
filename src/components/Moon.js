@@ -11,8 +11,8 @@ export default function Moon(props) {
 
 
     return(
-        <mesh {...props} ref={moon}>
-            <sphereGeometry args={[.5, 32, 32]} />
+        <mesh {...props} ref={moon} rotation={[0, 10, 0]}>
+            <sphereGeometry args={[.3, 32, 32]} />
             <meshStandardMaterial map={moonMap} />
         </mesh>
     );
