@@ -25,6 +25,8 @@ let DataStore = {
             if(obj.id === location.id) {
                 this.locations[i].color = "green";
                 return true;
+            } else {
+                return false;
             }
         })
         this.updateSubscribers();

@@ -149,7 +149,7 @@ export default function LocationModal() {
               </Grid>
 
               <Grid item xs={3}>
-                <img src={location.map} className="image" />
+                <img src={location.map} className="image" alt='detail map' />
               </Grid>
 
             </Grid>
