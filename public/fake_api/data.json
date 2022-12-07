@@ -1,10 +1,11 @@
 [
     {
         "id": 1,
+        "color": "red",
         "coordinates": {"lat": 40.023333, "long": -105.647778},
         "name": "Arapaho Glacier",
         "location": "Roosevelt National Forest, Colorado",
-        "map": "",
+        "map": "./locator_maps/1-locator-map.jpg",
         "years": [
             {
                 "year": "1898",
@@ -18,9 +19,11 @@
     },
     {
         "id": 2,
+        "color": "red",
         "coordinates": {"lat": 36.25, "long": -114.39},
         "name": "Lake Mead",
         "location": "Nevada/Arizona",
+        "map": "./locator_maps/2-locator-map.jpg",
         "years": [
             {
                 "year": "2000",
@@ -34,9 +37,11 @@
     },
     {
         "id": 3,
+        "color": "red",
         "coordinates": {"lat": -13.905332, "long": -70.834809},
         "name": "Qori Kalis Glacier",
         "location": "Andes Mountains, Peru",
+        "map": "./locator_maps/3-locator-map.jpeg",
         "years": [
             {
                 "year": "1978",
@@ -45,6 +50,168 @@
             {
                 "year": "2011",
                 "image": "./images/QoriKalis_2.png"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "color": "red",
+        "coordinates": {"lat": 45.0000, "long": 60.0000},
+        "name": "Aral Sea",
+        "location": "Kazakhstan/Uzbekistan",
+        "map": "./locator_maps/4-locator-map.jpg",
+        "years": [
+            {
+                "year": "2000",
+                "image": "./images/AralSea_1.jpg"
+            },
+            {
+                "year": "2014",
+                "image": "./images/AralSea_2.jpeg"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "color": "red",
+        "coordinates": {"lat": 27.402036, "long": 68.309451},
+        "name": "Indus River",
+        "location": "Larkana, Pakistan",
+        "map": "./locator_maps/5-locator-map.jpeg",
+        "years": [
+            {
+                "year": "2022",
+                "image": "./images/PakistanFlood_1.jpeg"
+            },
+            {
+                "year": "2022",
+                "image": "./images/PakistanFlood_2.jpeg"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "color": "red",
+        "coordinates": {"lat": -39.420833, "long": -71.939167},
+        "name": "Villarrica Volcano",
+        "location": "Andes Mountains, Chile",
+        "map": "./locator_maps/6-locator-map.jpeg",
+        "years": [
+            {
+                "year": "2018",
+                "image": "./images/villarrica_2.jpg"
+            },
+            {
+                "year": "2022",
+                "image": "./images/villarrica_1.jpg"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "color": "red",
+        "coordinates": {"lat": 72.411101, "long": -41.287368},
+        "name": "Ice Sheet Melting",
+        "location": "Greenland",
+        "map": "./locator_maps/7-locator-map.jpg",
+        "years": [
+            {
+                "year": "2014",
+                "image": "./images/greenland_1.jpg"
+            },
+            {
+                "year": "2016",
+                "image": "./images/greenland_2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "color": "red",
+        "coordinates": {"lat": 20.298185, "long": 44.640312},
+        "name": "Increased Desert Farming",
+        "location": "Wadi ad-Dawasir, Saudi Arabia",
+        "map": "./locator_maps/8-locator-map.jpg",
+        "years": [
+            {
+                "year": "2000",
+                "image": "./images/saudi_1.jpg"
+            },
+            {
+                "year": "2017",
+                "image": "./images/saudi_2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "color": "red",
+        "coordinates": {"lat": 41.737190, "long": -7.844434},
+        "name": "Alto Rabagao Reservoir Drought",
+        "location": "Rio Rabagao, Portugal",
+        "map": "./locator_maps/9-locator-map.jpg",
+        "years": [
+            {
+                "year": "2021",
+                "image": "./images/portugal_1.jpg"
+            },
+            {
+                "year": "2022",
+                "image": "./images/portugal_2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "color": "red",
+        "coordinates": {"lat": -7.300867, "long": 139.668144},
+        "name": "Deforestation",
+        "location": "Papua, Indonesia",
+        "map": "./locator_maps/10-locator-map.jpg",
+        "years": [
+            {
+                "year": "2002",
+                "image": "./images/indonesia_1.jpg"
+            },
+            {
+                "year": "2019",
+                "image": "./images/indonesia_2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "color": "red",
+        "coordinates": {"lat": 59.988437, "long": -149.595631},
+        "name": "Bear Glacier Melting",
+        "location": "Kenai Fjords National Park, Alaska",
+        "map": "./locator_maps/11-locator-map.jpg",
+        "years": [
+            {
+                "year": "1980",
+                "image": "./images/alaska_1.jpg"
+            },
+            {
+                "year": "1989",
+                "image": "./images/alaska_2.jpg"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "color": "red",
+        "coordinates": {"lat": -43.587328, "long": 170.155285},
+        "name": "Shrinking Glacier",
+        "location": "Aoraki/Mount Cook National Park, New Zealand",
+        "map": "./locator_maps/12-locator-map.jpg",
+        "years": [
+            {
+                "year": "1990",
+                "image": "./images/new_zealand_1.jpg"
+            },
+            {
+                "year": "2017",
+                "image": "./images/new_zealand_2.jpg"
             }
         ]
     }

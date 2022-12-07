@@ -16,6 +16,7 @@ export default function App() {
         <div>
             <LocationModal />
             <ThreeScene />
+
         </div>
     )
 

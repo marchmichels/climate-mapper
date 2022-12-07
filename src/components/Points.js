@@ -3,12 +3,18 @@ import React, { useState, useEffect } from "react";
 
 export default function Points() {
 
-    const [locations, setLocation] = useState([]);
+    //an array of location objects
+    const [locations, setLocations] = useState(DataStore.locations);
 
+    //subscribe to DataStore changes
     useEffect(() => {
-        setLocation(DataStore.locations);
+        DataStore.subscribe(onLocationsChange);
     }, []);
 
+    //when DataStore modal property changes, update information
+    function onLocationsChange() {
+        setLocations(DataStore.locations);
+    }
 
     //calculate position on globe from lat and long
     function calcPosFromLatLonRad(lat, long) {
@@ -20,21 +26,16 @@ export default function Points() {
         return [x, y, z];
     }
 
-
-
+    //create a point for each object in locations array
     const points = locations.map((location) => (
         <mesh key={location.id} position={calcPosFromLatLonRad(location.coordinates.lat, location.coordinates.long)}
             onClick={(e) => {
                 DataStore.updateModal(location);
-                //console.log(DataStore.modal)
             }}>
-            <sphereGeometry args={[.01, 20, 20]} />
-            <meshStandardMaterial color={"red"} />
+            <sphereGeometry args={[.02, 20, 20]} />
+            <meshStandardMaterial color={location.color} />
         </mesh>
-
     ))
-
-    //console.log(points);
 
     return (
         <>

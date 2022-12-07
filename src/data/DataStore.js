@@ -20,6 +20,13 @@ let DataStore = {
     //updates the modal property with a data object
     updateModal: function (location) {
         this.modal = location;
+        //update clicked object color in locations array
+        this.locations.find((obj, i) => {
+            if(obj.id === location.id) {
+                this.locations[i].color = "green";
+                return true;
+            }
+        })
         this.updateSubscribers();
     },
 
@@ -30,8 +37,7 @@ let DataStore = {
             .then((result) => {
                 this.locations = result;
             });
-    }
-
+    },
 }
 
 export { DataStore };
